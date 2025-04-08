@@ -45,6 +45,7 @@ app.use(
       // secure: process.env.NODE_ENV === 'production', // Use secure cookies in production (HTTPS)
       secure: true, // Set to true if using HTTPS
       httpOnly: true, // Prevent client-side JS access
+      sameSite: 'none', // Allow cross-origin cookies (needed for CORS)
       maxAge: 1000 * 60 * 60 * 24 // 1 day session expiry
     }
   })
